@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="logo">Becky
+      <span>Afyai</span></a>
+
+    <i class="bx bx-menu" id="menu-icon"></i>
+
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+  </header>
+  <section class="home" id="home">
+    <div class="home-content">
+      <h1>Konnichiwa 😊, my name is <span>Becky Afyai</span></h1>
+      <h3>I'm an aspiring <span>Software Engineer</span>.</h3>
+      <p>An aspiring software developer passionate about frontend design & user experience and future tech girlie in the making 💻💅.</p>
+
+      <div class="social-icons">
+          <a href="https://github.com/Beca824" target="_blank"><i class="fa-brands fa-github"></i></a>
+    </div>
+
+     <div class="btn-group">
+      <a href="#contact" class="btn">Hire me</a>
+      <a href="#contact" class="btn">Contact</a>
+    </div>
+
+    </div>
+
+    <div class="home-img">
+      <img src="img.png" alt="my image">
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-img">
+      <img src="img.png" alt="my img">
+    </div>
+
+    <div class="about-content">
+      <h2>About <span>Me</span></h2>
+      <p>
+        I’m a frontend developer who turns coffee into clean HTML & CSS. Currently on a mission to master JavaScript and conquer the backend world with PHP and Python and become a full stack tech girlie. 💥
+I build websites that not only look good but work like magic. ✨
+When I’m not coding, I’m probably watching anime or rewatching tutorials I swore I understood the first time. 😅
+Let’s create something awesome or at least something that doesn’t break on mobile. 😉
+      </p>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <h2 class="heading">Projects</h2>
+
+    <div class="projects-container">
+      <div class="project-box">
+        <div class="project-info">
+          <i class="fa-solid fa-database"></i>
+          <h4>Apartment Website</h4>
+          <p>
+         Responsive apartment listings with PHP form integration and video background.
+         <p><strong>Skills:</strong> HTML, CSS, JS</p>
+         <a href="https://github.com/Beca824/Web-apartment.git">View on GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-box">
+        <div class="project-info">
+          <i class="fa-solid fa-chart-line"></i>
+          <h4>Rental Apartment Website</h4>
+          <p>A responsive and user-friendly website for showcasing apartment listings, built with HTML, CSS, and JavaScript. Includes a contact form, apartment categories, and integrated payment system for booking.</p>
+          <p><strong>Skills</strong> HTML,CSS, JS</p>
+          <a href="https://github.com/Beca824/Apartment-.git">View on GitHub</a>
+        </div>
+      </div>
+      
+      <div class="project-box">
+        <div class="project-info">
+          <i class="fa-solid fa-user-shield"></i>
+          <h4>Restaurant Website</h4>
+          <p>A stylish and responsive restaurant website built to showcase menus, customer reviews, and a reservation/contact system. </p>
+          <p><strong>Skills</strong> HTML, CSS, JS</p>
+          <a href="https://github.com/Beca824/Restaurant.git">View on GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me</span></h2>
+
+    <form action="contact.php" method="POST">
+      <div class="input-group">
+      
+
+        <div class="input-box">
+          <input type="text" name="name" placeholder="Full Name">
+          <input type="email" name="email" placeholder="Email">
+        </div>
+        <div class="input-box">
+          <input type="number" name="phone" placeholder="Phone Number">
+          <input type="text" name="subject" placeholder="Subject">
+        </div>
+
+      </div>
+
+      <div class="input-group-2">
+        <textarea name="message" id="" cols="30" rows="10"
+        placeholder="Your message">
+      </textarea>
+      <input type="submit" value="Send message" class="btn">
+      </div>
+    </form>
+
+    <div id="thankYou" style="display:none;">
+    <p>Thank you for reaching out! 😊</p>
+  </div>
+  
+  </section>
+
+  <footer class="footer">
+    <div class="social-icons">
+          <a href="https://github.com/Beca824" target="_blank"><i class="fa-brands fa-github"></i></a>
+    </div>
+
+    <ul class="list">
+      <li>
+        <a href="#projects">Projects</a>
+      </li>
+
+      <li>
+        <a href="#about">About Me</a>
+      </li>
+
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+
+      <p class="copyright">
+        2025 Becky Afyai. All rights reserved.
+      </p>
+    </ul>
+  </footer>
+      <script src="script.js"></script>     
+</body>
+</html>
