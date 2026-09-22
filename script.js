@@ -33,15 +33,32 @@ contactForm.addEventListener('submit', async (event) => {
         const result = await response.json();
 
         if (result.success) {
+
+            // Clear everything after successful submission
             contactForm.reset();
+
+            // Hide form
             contactForm.style.display = 'none';
+
+            // Show thank-you message
             thankYou.style.display = 'block';
+
         } else {
+
+            // Clear the form even when sending fails
+            contactForm.reset();
+
             alert(result.message || 'Something went wrong. Please try again.');
         }
 
     } catch (error) {
+
+        // Clear the form
+        contactForm.reset();
+
         alert('Unable to send your message. Please try again later.');
+
+        console.error('Contact form error:', error);
     }
 
     submitButton.value = 'Send Message';
