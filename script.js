@@ -1,66 +1,146 @@
-const menuIcon = document.querySelector('#menu-icon');
-const navbar = document.querySelector('.navbar');
+const terminalText = document.getElementById("terminalTyping");
 
-// Mobile navigation
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-};
+const terminalMessages = [
+    "loading_security_lab...",
+    "checking_environment...",
+    "initializing_linux_tools...",
+    "loading_recon_modules...",
+    "loading_web_security_modules...",
+    "checking_lab_progress...",
+    "environment_ready"
+];
 
+let messageIndex = 0;
+let characterIndex = 0;
+let deleting = false;
 
-// Contact form
-const contactForm = document.querySelector('#contact-form');
-const thankYou = document.querySelector('#thankYou');
-const submitButton = contactForm.querySelector('input[type="submit"]');
+function typeTerminal() {
 
-contactForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
+    const currentMessage = terminalMessages[messageIndex];
 
-    submitButton.value = 'Sending...';
-    submitButton.disabled = true;
+    if (!deleting) {
 
-    const formData = new FormData(contactForm);
+        terminalText.textContent =
+            currentMessage.substring(0, characterIndex + 1);
 
-    try {
-        const response = await fetch('contact.php', {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
+        characterIndex++;
 
-        const result = await response.json();
+        if (characterIndex === currentMessage.length) {
 
-        if (result.success) {
+            deleting = true;
 
-            // Clear everything after successful submission
-            contactForm.reset();
-
-            // Hide form
-            contactForm.style.display = 'none';
-
-            // Show thank-you message
-            thankYou.style.display = 'block';
-
-        } else {
-
-            // Clear the form even when sending fails
-            contactForm.reset();
-
-            alert(result.message || 'Something went wrong. Please try again.');
+            setTimeout(typeTerminal, 1800);
+            return;
         }
 
-    } catch (error) {
+    } else {
 
-        // Clear the form
-        contactForm.reset();
+        terminalText.textContent =
+            currentMessage.substring(0, characterIndex - 1);
 
-        alert('Unable to send your message. Please try again later.');
+        characterIndex--;
 
-        console.error('Contact form error:', error);
+        if (characterIndex === 0) {
+
+            deleting = false;
+
+            messageIndex++;
+
+            if (messageIndex >= terminalMessages.length) {
+                messageIndex = 0;
+            }
+        }
     }
 
-    submitButton.value = 'Send Message';
-    submitButton.disabled = false;
-});
+    setTimeout(typeTerminal, deleting ? 35 : 70);
+}
+
+if (terminalText) {
+    typeTerminal();
+}
+
+
+//Mobile Navigation
+const menuIcon = document.querySelector("#menu-icon");
+const navbar = document.querySelector(".navbar");
+
+if (menuIcon && navbar) {
+
+    menuIcon.onclick = () => {
+
+        menuIcon.classList.toggle("bx-x");
+        navbar.classList.toggle("active");
+
+    };
+
+}
+
+//contact form
+const contactForm = document.querySelector("#contact-form");
+const thankYou = document.querySelector("#thankYou");
+
+if (contactForm && thankYou) {
+
+    const submitButton =
+        contactForm.querySelector('input[type="submit"]');
+
+    contactForm.addEventListener("submit", async (event) => {
+
+        event.preventDefault();
+
+        submitButton.value = "Sending...";
+        submitButton.disabled = true;
+
+        const formData = new FormData(contactForm);
+
+        try {
+
+            const response = await fetch(
+                "contact.php",
+                {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        "Accept": "application/json"
+                    }
+                }
+            );
+
+            const result = await response.json();
+
+            if (result.success) {
+
+                contactForm.reset();
+
+                contactForm.style.display = "none";
+
+                thankYou.style.display = "block";
+
+            } else {
+
+                alert(
+                    result.message ||
+                    "Something went wrong. Please try again."
+                );
+
+            }
+
+        } catch (error) {
+
+            alert(
+                "Unable to send your message. Please try again later."
+            );
+
+            console.error(
+                "Contact form error:",
+                error
+            );
+
+        }
+
+        submitButton.value = "Send Message";
+        submitButton.disabled = false;
+
+    });
+
+}

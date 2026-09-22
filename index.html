@@ -6,12 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-```
 <meta name="description"
-    content="Becky Afyai - Cybersecurity professional building practical skills in penetration testing, security operations, Linux, networking and web security.">
+    content="Becky Afyai - Cybersecurity professional building practical skills in penetration testing, Linux, networking, web security and security testing.">
 
 <meta name="keywords"
-    content="Becky Afyai, cybersecurity, penetration testing, ethical hacking, SOC, Linux, networking, web security">
+    content="Becky Afyai, cybersecurity, penetration testing, ethical hacking, Linux, networking, web security">
 
 <meta name="author" content="Becky Afyai">
 
@@ -19,12 +18,11 @@
 
 <link rel="stylesheet" href="style.css">
 
-<!-- Font Awesome -->
 <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <link rel="icon" type="image/png" href="favicon.png">
-```
+
 
 </head>
 
@@ -50,25 +48,60 @@
 </header>
 
 
+
 <section class="home" id="home">
+
+    <!-- LEFT SIDE -->
 
     <div class="home-content">
 
+        <div class="terminal-prompt">
+            <span class="prompt-symbol">&gt;</span>
+            <span>root@portfolio:~$</span>
+            <span class="command">whoami</span>
+        </div>
+
         <h1>
-            Hello 😊, I'm <span>Becky Afyai</span>.
+            Hello, I'm <span>Becky Afyai.</span>
         </h1>
 
         <h3>
-            Junior Cybersecurity Professional |
-            Penetration Testing & Security
+            Junior Cybersecurity Professional
         </h3>
+
+        <p class="home-role">
+            Penetration Testing &amp; Security
+        </p>
 
         <p>
             I'm a cybersecurity-certified Business Information Technology
             graduate building hands-on experience in penetration testing,
-            security operations, Linux, networking, reconnaissance,
-            enumeration, vulnerability assessment, and web security.
+            Linux, networking, reconnaissance, enumeration, vulnerability
+            assessment, and web security.
         </p>
+
+
+
+        <div class="home-buttons">
+
+            <a href="#contact" class="btn">
+                Contact Me
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="https://drive.google.com/file/d/1MEyj7B_5iXjK33W2RYfXo6ctbbpapGCX/view?usp=sharing"
+                class="btn secondary-btn"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Download CV
+                <i class="fa-solid fa-file-arrow-down"></i>
+
+            </a>
+
+        </div>
+
+
 
         <div class="social-icons">
 
@@ -92,54 +125,186 @@
 
         </div>
 
-        <div class="btn-group">
-
-            <a href="#contact" class="btn">
-                Contact Me
-            </a>
-
-            <a href="https://drive.google.com/file/d/1gLRqu52HtvoJwHnUqgoDpCbqODSyQikW/view?usp=sharing"
-                class="btn"
-                target="_blank"
-                rel="noopener noreferrer">
-
-                Download CV
-
-            </a>
-
-        </div>
-
     </div>
 
 
-    <div class="home-img">
 
-        <img src="img.jpeg" alt="Portrait of Becky Afyai">
+    <div class="cyber-dashboard">
+
+
+        <div class="dashboard-header">
+
+            <div>
+                <i class="fa-solid fa-terminal"></i>
+                <span>CYBER LAB</span>
+            </div>
+
+            <div class="learning-status">
+                <span class="status-dot"></span>
+                LEARNING MODE
+            </div>
+
+        </div>
+
+
+
+        <div class="terminal-window">
+
+            <div class="terminal-line">
+
+                <span class="terminal-prompt">
+                    &gt;
+                </span>
+
+                <span class="typing-text" id="terminalTyping">
+                    initializing_lab...
+                </span>
+
+            </div>
+
+
+            <div class="terminal-output">
+
+                <p>
+                    <span class="green">[+]</span>
+                    Environment ready
+                </p>
+
+                <p>
+                    <span class="green">[+]</span>
+                    Security labs loaded
+                </p>
+
+                <p>
+                    <span class="yellow">[*]</span>
+                    Learning through hands-on practice
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Current Focus -->
+
+        <div class="dashboard-section">
+
+            <div class="section-title">
+
+                <i class="fa-solid fa-crosshairs"></i>
+
+                CURRENT FOCUS
+
+            </div>
+
+
+            <div class="focus-list">
+
+                <span>Penetration Testing</span>
+                <span>Web Security</span>
+                <span>Linux</span>
+                <span>Networking</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Security Toolkit -->
+
+        <div class="dashboard-section">
+
+            <div class="section-title">
+
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                SECURITY TOOLKIT
+
+            </div>
+
+
+            <div class="tool-list">
+
+                <span>Kali Linux</span>
+                <span>Nmap</span>
+                <span>Metasploit</span>
+                <span>Python</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Lab Activity -->
+
+        <div class="dashboard-section">
+
+            <div class="section-title">
+
+                <i class="fa-solid fa-flask"></i>
+
+                LAB ACTIVITY
+
+            </div>
+
+
+            <div class="activity-list">
+
+                <div>
+                    <span class="activity-check">✓</span>
+                    OWASP Top 10
+                </div>
+
+                <div>
+                    <span class="activity-check">✓</span>
+                    Reconnaissance
+                </div>
+
+                <div>
+                    <span class="activity-check">✓</span>
+                    Enumeration
+                </div>
+
+                <div>
+                    <span class="activity-learning">◐</span>
+                    Incident Response
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Dashboard Footer -->
+
+        <div class="dashboard-footer">
+
+            <span>BUILDING</span>
+            <span>/</span>
+            <span>LEARNING</span>
+            <span>/</span>
+            <span>PRACTICING</span>
+
+        </div>
 
     </div>
 
 </section>
 
 
+
 <section class="about" id="about">
-
-    <div class="about-img">
-
-        <img src="img.jpeg" alt="Becky Afyai profile image">
-
-    </div>
-
 
     <div class="about-content">
 
-        <h2>
+        <h2 class="heading">
             About <span>Me</span>
         </h2>
 
         <p>
             I'm a cybersecurity-certified Business Information Technology
             graduate with a growing focus on penetration testing,
-            security operations, and practical cybersecurity.
+            security testing, and practical cybersecurity.
         </p>
 
         <p>
@@ -151,7 +316,7 @@
 
         <p>
             I've also worked with cybersecurity concepts and frameworks
-            including the OWASP Top 10, MITRE ATT&CK, Cyber Kill Chain,
+            including the OWASP Top 10, MITRE ATT&amp;CK, Cyber Kill Chain,
             Defense in Depth, and incident response fundamentals.
         </p>
 
@@ -170,7 +335,63 @@
 
     </div>
 
+
+
+    <div class="about-terminal">
+
+        <div class="about-terminal-header">
+            <span>BECKY_AFYAI</span>
+            <span class="green">● ONLINE</span>
+        </div>
+
+        <div class="about-terminal-body">
+
+            <p>
+                <span class="red">&gt;</span>
+                mission
+            </p>
+
+            <p class="terminal-green">
+                Keep learning.
+            </p>
+
+            <p class="terminal-green">
+                Keep practicing.
+            </p>
+
+            <p class="terminal-green">
+                Keep building.
+            </p>
+
+            <br>
+
+            <p>
+                <span class="red">&gt;</span>
+                objective
+            </p>
+
+            <p class="terminal-green">
+                Grow through hands-on
+                cybersecurity experience.
+            </p>
+
+            <br>
+
+            <p>
+                <span class="red">&gt;</span>
+                status
+            </p>
+
+            <p class="yellow">
+                STILL_LEARNING_
+            </p>
+
+        </div>
+
+    </div>
+
 </section>
+
 
 
 <section class="skills" id="skills">
@@ -181,6 +402,8 @@
 
 
     <div class="projects-container">
+
+        <!-- Cybersecurity -->
 
         <div class="project-box">
 
@@ -201,13 +424,15 @@
         </div>
 
 
+        <!-- Linux -->
+
         <div class="project-box">
 
             <div class="project-info">
 
                 <i class="fa-brands fa-linux"></i>
 
-                <h4>Linux & Security Tools</h4>
+                <h4>Linux &amp; Security Tools</h4>
 
                 <p>
                     Kali Linux, Linux Command Line, Nmap, Metasploit,
@@ -218,6 +443,8 @@
 
         </div>
 
+
+        <!-- Networking -->
 
         <div class="project-box">
 
@@ -238,6 +465,8 @@
         </div>
 
 
+        <!-- Development -->
+
         <div class="project-box">
 
             <div class="project-info">
@@ -257,6 +486,8 @@
 
     </div>
 
+
+    <!-- Skills Icons -->
 
     <div class="skills-icons">
 
@@ -291,6 +522,10 @@
 </section>
 
 
+<!-- ================================
+     PROJECTS
+================================= -->
+
 <section class="projects" id="projects">
 
     <h2 class="heading">
@@ -301,7 +536,7 @@
     <div class="projects-container">
 
 
-    
+        <!-- PROJECT 1 -->
 
         <div class="project-box">
 
@@ -332,6 +567,7 @@
                     rel="noopener noreferrer">
 
                     View on GitHub
+                    <i class="fa-solid fa-arrow-right"></i>
 
                 </a>
 
@@ -340,7 +576,7 @@
         </div>
 
 
-        
+        <!-- PROJECT 2 -->
 
         <div class="project-box">
 
@@ -372,6 +608,7 @@
                     rel="noopener noreferrer">
 
                     View Documentation
+                    <i class="fa-solid fa-arrow-right"></i>
 
                 </a>
 
@@ -380,7 +617,46 @@
         </div>
 
 
-        
+        <!-- PROJECT 3 -->
+
+        <div class="project-box">
+
+            <div class="project-info">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <h4>
+                    Hash Password Cracker
+                </h4>
+
+                <p>
+                    A Python-based password security tool that demonstrates
+                    how dictionary attacks can be used to test password
+                    hashes against candidate passwords from a wordlist.
+                </p>
+
+                <p>
+                    <strong>Skills:</strong>
+                    Python, Password Hashing, Hash Comparison,
+                    Wordlists, Dictionary Attacks,
+                    Authentication Security
+                </p>
+
+                <a href="https://github.com/Beca824/cybersecurity-lab-journal"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    View on GitHub
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT 4 -->
 
         <div class="project-box">
 
@@ -410,6 +686,7 @@
                     rel="noopener noreferrer">
 
                     View Lab Journal
+                    <i class="fa-solid fa-arrow-right"></i>
 
                 </a>
 
@@ -418,7 +695,7 @@
         </div>
 
 
-        
+        <!-- PROJECT 5 -->
 
         <div class="project-box">
 
@@ -448,6 +725,7 @@
                     rel="noopener noreferrer">
 
                     View Lab Journal
+                    <i class="fa-solid fa-arrow-right"></i>
 
                 </a>
 
@@ -455,10 +733,15 @@
 
         </div>
 
+
     </div>
 
 </section>
 
+
+<!-- ================================
+     CONTACT
+================================= -->
 
 <section class="contact" id="contact">
 
@@ -526,6 +809,8 @@
     </form>
 
 
+    <!-- Thank You Message -->
+
     <div id="thankYou"
         class="thank-you"
         style="display: none;">
@@ -545,6 +830,10 @@
 
 </section>
 
+
+<!-- ================================
+     FOOTER
+================================= -->
 
 <footer class="footer">
 
@@ -575,7 +864,7 @@
     <ul class="list">
 
         <li>
-            <a href="#projects">Projects</a>
+            <a href="#home">Home</a>
         </li>
 
         <li>
@@ -584,6 +873,10 @@
 
         <li>
             <a href="#skills">Skills</a>
+        </li>
+
+        <li>
+            <a href="#projects">Projects</a>
         </li>
 
         <li>
@@ -599,6 +892,8 @@
 
 </footer>
 
+
+<!-- JavaScript -->
 
 <script src="script.js"></script>
 ```
