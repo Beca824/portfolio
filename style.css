@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 
+/* =========================================================
+   GLOBAL
+========================================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -17,20 +21,20 @@
     --panel: #0b1113;
     --panel-light: #101719;
 
-    --neon: #00ff9d;
-    --cyan: #00e5ff;
-    --green-dark: #00b875;
+    --neon: #00e695;
+    --cyan: #00d9ee;
+    --green-dark: #00a968;
 
     --text: #f2f5f4;
     --text-muted: #9aa7a3;
     --text-dim: #65716d;
 
-    --border: rgba(0, 255, 157, 0.22);
-    --border-bright: rgba(0, 255, 157, 0.55);
+    --border: rgba(0, 230, 149, 0.17);
+    --border-bright: rgba(0, 230, 149, 0.38);
 
     --glow:
-        0 0 10px rgba(0, 255, 157, 0.25),
-        0 0 30px rgba(0, 255, 157, 0.08);
+        0 0 8px rgba(0, 230, 149, 0.14),
+        0 0 20px rgba(0, 230, 149, 0.04);
 }
 
 html {
@@ -42,12 +46,12 @@ body {
     background:
         radial-gradient(
             circle at 80% 10%,
-            rgba(0, 255, 157, 0.055),
+            rgba(0, 230, 149, 0.035),
             transparent 30%
         ),
         radial-gradient(
             circle at 10% 70%,
-            rgba(0, 229, 255, 0.035),
+            rgba(0, 217, 238, 0.025),
             transparent 30%
         ),
         var(--bg);
@@ -60,6 +64,10 @@ body {
 }
 
 
+/* =========================================================
+   BACKGROUND GRID
+========================================================= */
+
 body::before {
     content: "";
 
@@ -68,12 +76,12 @@ body::before {
 
     background-image:
         linear-gradient(
-            rgba(0, 255, 157, 0.018) 1px,
+            rgba(0, 230, 149, 0.012) 1px,
             transparent 1px
         ),
         linear-gradient(
             90deg,
-            rgba(0, 255, 157, 0.018) 1px,
+            rgba(0, 230, 149, 0.012) 1px,
             transparent 1px
         );
 
@@ -85,6 +93,9 @@ body::before {
 }
 
 
+/* =========================================================
+   HEADER
+========================================================= */
 
 .header {
     position: fixed;
@@ -99,11 +110,11 @@ body::before {
     justify-content: space-between;
     align-items: center;
 
-    background: rgba(5, 7, 8, 0.88);
+    background: rgba(5, 7, 8, 0.92);
 
     backdrop-filter: blur(12px);
 
-    border-bottom: 1px solid rgba(0, 255, 157, 0.12);
+    border-bottom: 1px solid rgba(0, 230, 149, 0.09);
 
     z-index: 1000;
 }
@@ -119,7 +130,7 @@ body::before {
     color: var(--neon);
 
     text-shadow:
-        0 0 8px rgba(0, 255, 157, 0.5);
+        0 0 5px rgba(0, 230, 149, 0.28);
 }
 
 .navbar {
@@ -153,7 +164,7 @@ body::before {
 
     background: var(--neon);
 
-    box-shadow: 0 0 8px var(--neon);
+    box-shadow: 0 0 5px rgba(0, 230, 149, 0.3);
 
     transition: 0.25s ease;
 }
@@ -199,7 +210,7 @@ section {
     color: var(--neon);
 
     text-shadow:
-        0 0 12px rgba(0, 255, 157, 0.35);
+        0 0 6px rgba(0, 230, 149, 0.18);
 }
 
 
@@ -236,7 +247,7 @@ section {
     right: 12%;
     top: 10%;
 
-    background: rgba(0, 255, 157, 0.055);
+    background: rgba(0, 230, 149, 0.035);
 
     filter: blur(120px);
 
@@ -297,7 +308,7 @@ section {
     color: var(--neon);
 
     text-shadow:
-        0 0 15px rgba(0, 255, 157, 0.35);
+        0 0 8px rgba(0, 230, 149, 0.2);
 }
 
 .home-content h3 {
@@ -354,7 +365,7 @@ section {
 
     border-radius: 4px;
 
-    background: rgba(0, 255, 157, 0.04);
+    background: rgba(0, 230, 149, 0.025);
 
     color: var(--neon);
 
@@ -373,14 +384,14 @@ section {
     color: #03100b;
 
     box-shadow:
-        0 0 10px rgba(0, 255, 157, 0.5),
-        0 0 30px rgba(0, 255, 157, 0.2);
+        0 0 8px rgba(0, 230, 149, 0.32),
+        0 0 22px rgba(0, 230, 149, 0.10);
 
     transform: translateY(-2px);
 }
 
 .secondary-btn {
-    border-color: rgba(0, 229, 255, 0.45);
+    border-color: rgba(0, 217, 238, 0.35);
 
     color: var(--cyan);
 }
@@ -391,20 +402,22 @@ section {
     color: #001014;
 
     box-shadow:
-        0 0 15px rgba(0, 229, 255, 0.35);
+        0 0 10px rgba(0, 217, 238, 0.22);
 }
 
 
 /* =========================================================
-   SOCIAL ICONS
+   SOCIAL + CONTACT ICONS
 ========================================================= */
 
 .social-icons {
     display: flex;
 
-    gap: 2rem;
+    gap: 1.4rem;
 
     margin-top: 3rem;
+
+    flex-wrap: wrap;
 }
 
 .social-icons a {
@@ -423,7 +436,7 @@ section {
 
     color: var(--text-muted);
 
-    font-size: 2rem;
+    font-size: 1.9rem;
 
     transition: 0.3s ease;
 }
@@ -462,8 +475,8 @@ section {
     border-radius: 8px;
 
     box-shadow:
-        0 0 30px rgba(0, 255, 157, 0.08),
-        inset 0 0 40px rgba(0, 255, 157, 0.025);
+        0 0 22px rgba(0, 230, 149, 0.045),
+        inset 0 0 30px rgba(0, 230, 149, 0.015);
 
     overflow: hidden;
 }
@@ -477,12 +490,12 @@ section {
 
     background-image:
         linear-gradient(
-            rgba(0, 255, 157, 0.025) 1px,
+            rgba(0, 230, 149, 0.018) 1px,
             transparent 1px
         ),
         linear-gradient(
             90deg,
-            rgba(0, 255, 157, 0.025) 1px,
+            rgba(0, 230, 149, 0.018) 1px,
             transparent 1px
         );
 
@@ -548,7 +561,8 @@ section {
 
     border-radius: 50%;
 
-    box-shadow: 0 0 10px var(--neon);
+    box-shadow:
+        0 0 5px rgba(0, 230, 149, 0.4);
 }
 
 
@@ -563,7 +577,7 @@ section {
 
     background: rgba(0, 0, 0, 0.65);
 
-    border: 1px solid rgba(0, 255, 157, 0.2);
+    border: 1px solid rgba(0, 230, 149, 0.15);
 
     border-radius: 5px;
 
@@ -652,7 +666,7 @@ section {
 
     border-radius: 4px;
 
-    background: rgba(0, 255, 157, 0.025);
+    background: rgba(0, 230, 149, 0.018);
 
     color: var(--text-muted);
 
@@ -668,11 +682,11 @@ section {
     color: var(--neon);
 
     box-shadow:
-        0 0 10px rgba(0, 255, 157, 0.08);
+        0 0 7px rgba(0, 230, 149, 0.07);
 }
 
 .tool-list span {
-    border-color: rgba(0, 229, 255, 0.22);
+    border-color: rgba(0, 217, 238, 0.18);
 }
 
 
@@ -751,7 +765,7 @@ section {
         linear-gradient(
             180deg,
             transparent,
-            rgba(0, 255, 157, 0.015),
+            rgba(0, 230, 149, 0.01),
             transparent
         );
 }
@@ -891,7 +905,8 @@ section {
 
     background: var(--neon);
 
-    box-shadow: 0 0 12px var(--neon);
+    box-shadow:
+        0 0 7px rgba(0, 230, 149, 0.3);
 
     transition: 0.3s ease;
 }
@@ -903,7 +918,7 @@ section {
 
     box-shadow:
         0 10px 35px rgba(0, 0, 0, 0.35),
-        0 0 20px rgba(0, 255, 157, 0.05);
+        0 0 15px rgba(0, 230, 149, 0.035);
 }
 
 .project-box:hover::before {
@@ -920,7 +935,7 @@ section {
     font-size: 3rem;
 
     text-shadow:
-        0 0 10px rgba(0, 255, 157, 0.25);
+        0 0 7px rgba(0, 230, 149, 0.18);
 }
 
 .project-info h4 {
@@ -976,7 +991,7 @@ section {
     transform: translateY(-5px);
 
     text-shadow:
-        0 0 12px rgba(0, 255, 157, 0.45);
+        0 0 8px rgba(0, 230, 149, 0.28);
 }
 
 
@@ -988,7 +1003,7 @@ section {
     background:
         linear-gradient(
             180deg,
-            rgba(0, 255, 157, 0.012),
+            rgba(0, 230, 149, 0.008),
             transparent
         );
 }
@@ -1029,145 +1044,6 @@ section {
 
 
 /* =========================================================
-   CONTACT
-========================================================= */
-
-.contact {
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(0, 255, 157, 0.025),
-            transparent 45%
-        );
-}
-
-.contact form {
-    max-width: 850px;
-
-    margin: 0 auto;
-}
-
-.input-group {
-    display: flex;
-
-    gap: 1.5rem;
-}
-
-.input-box {
-    width: 50%;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 1.5rem;
-}
-
-.input-group-2 {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 1.5rem;
-
-    margin-top: 1.5rem;
-}
-
-.input-box input,
-.input-group-2 textarea {
-    width: 100%;
-
-    padding: 1.5rem;
-
-    background: rgba(9, 13, 15, 0.9);
-
-    border: 1px solid var(--border);
-
-    border-radius: 4px;
-
-    color: var(--text);
-
-    font-family: "Inter", sans-serif;
-
-    font-size: 1.4rem;
-
-    transition: 0.25s ease;
-}
-
-.input-box input::placeholder,
-.input-group-2 textarea::placeholder {
-    color: var(--text-dim);
-}
-
-.input-box input:focus,
-.input-group-2 textarea:focus {
-    border-color: var(--neon);
-
-    box-shadow:
-        0 0 12px rgba(0, 255, 157, 0.08);
-}
-
-.input-group-2 textarea {
-    resize: vertical;
-
-    min-height: 220px;
-}
-
-.input-group-2 .btn {
-    width: fit-content;
-
-    align-self: center;
-
-    padding: 1.3rem 3rem;
-}
-
-
-/* =========================================================
-   THANK YOU MESSAGE
-========================================================= */
-
-.thank-you {
-    max-width: 600px;
-
-    margin: 4rem auto;
-
-    padding: 4rem 3rem;
-
-    text-align: center;
-
-    background: var(--panel);
-
-    border: 1px solid var(--border-bright);
-
-    border-radius: 6px;
-
-    box-shadow: var(--glow);
-}
-
-.thank-you i {
-    color: var(--neon);
-
-    font-size: 5rem;
-
-    margin-bottom: 2rem;
-}
-
-.thank-you h3 {
-    font-size: 2.2rem;
-
-    margin-bottom: 1rem;
-}
-
-.thank-you p {
-    color: var(--text-muted);
-
-    font-size: 1.4rem;
-
-    line-height: 1.7;
-}
-
-
-/* =========================================================
    FOOTER
 ========================================================= */
 
@@ -1178,7 +1054,7 @@ section {
 
     background: #030505;
 
-    border-top: 1px solid rgba(0, 255, 157, 0.12);
+    border-top: 1px solid rgba(0, 230, 149, 0.09);
 }
 
 .footer .social-icons {
@@ -1263,7 +1139,6 @@ section {
     .about-content .heading {
         text-align: center;
     }
-
 }
 
 
@@ -1317,7 +1192,7 @@ section {
 
         padding: 1.3rem 0;
 
-        border-bottom: 1px solid rgba(0, 255, 157, 0.08);
+        border-bottom: 1px solid rgba(0, 230, 149, 0.06);
     }
 
     .navbar a::after {
@@ -1378,18 +1253,18 @@ section {
         width: 100%;
     }
 
-    .input-group {
-        flex-direction: column;
-    }
-
-    .input-box {
-        width: 100%;
-    }
-
     .heading {
         font-size: 3.5rem;
     }
 
+    .social-icons {
+        gap: 1.2rem;
+    }
+
+    .social-icons a {
+        width: 4.3rem;
+        height: 4.3rem;
+    }
 }
 
 
@@ -1437,5 +1312,12 @@ section {
         gap: 2rem;
     }
 
-}
+    .social-icons {
+        gap: 1rem;
+    }
 
+    .social-icons a {
+        width: 4.2rem;
+        height: 4.2rem;
+    }
+}
