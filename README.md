@@ -5,7 +5,7 @@ hands-on labs, certifications, and continued learning in cybersecurity.
 
 ## 🌐 Live Portfolio
 
-[https://beckyportfolio.infinityfreeapp.com/]
+[View Portfolio](https://beckyportfolio.infinityfreeapp.com/)
 
 ## 👩🏽‍💻 About Me
 
