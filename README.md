@@ -5,7 +5,7 @@ hands-on labs, certifications, and continued learning in cybersecurity.
 
 ## 🌐 Live Portfolio
 
-[View my portfolio]
+[https://beckyportfolio.infinityfreeapp.com/]
 
 ## 👩🏽‍💻 About Me
 
@@ -107,7 +107,7 @@ portfolio/
 📬 Contact
 GitHub: https://github.com/Beca824
 LinkedIn: https://www.linkedin.com/in/becky-afyai-ab66733b3
-Portfolio: 
+Portfolio: https://beckyportfolio.infinityfreeapp.com/
 ⚠️ Disclaimer
 
 All security testing and penetration-testing activities documented in this
